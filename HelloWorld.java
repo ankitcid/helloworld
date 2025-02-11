@@ -1,5 +1,8 @@
-public class HelloWorld {
-  public static void main(String[] args) {
-    System.out.println("Hello World! - This is Hello World program.");
-  }
+public class HelloWorld extends TimerTask {
+    public void run() {
+       System.out.println("Hello World!"); 
+    }
 }
+
+Timer timer = new Timer();
+timer.schedule(new HelloWorld(), 0, 5000);
